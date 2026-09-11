@@ -6,7 +6,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
   
 jobs:
   test:
@@ -53,8 +52,6 @@ jobs:
       - name: Verify remote URL
         run: |
           git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}.git
-          echo "Current remote URL:"
-          git remote -v
 
       - name: Push changes to main
         run: |
