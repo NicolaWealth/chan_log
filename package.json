@@ -32,7 +32,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf dist/* && rm -f tsconfig.tsbuildinfo",
+    "clean": "rm -rf .build dist/* && rm -f tsconfig.tsbuildinfo",
     "build": "tsc --outDir .build --declaration false --declarationMap false --sourceMap false --inlineSourceMap false --inlineSources false --composite false && tsc --outDir dist/types --declaration --emitDeclarationOnly --declarationMap --composite false && microbundle .build/index.js --format umd --output dist/index.umd.js --no-generateTypes",
     "lint": "eslint src",
     "test": "mocha",
